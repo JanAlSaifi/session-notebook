@@ -1,39 +1,59 @@
-These are common Git commands used in various situations:
+### Basic Shell commands
 
-start a working area (see also: git help tutorial)
-clone Clone a repository into a new directory
-init Create an empty Git repository or reinitialize an existing one
+| command                  | functionality                                                              |
+| ------------------------ | -------------------------------------------------------------------------- |
+| `ls`                     | list the content of the current directory                                  |
+| `cd <foldername>`        | change directory into a folder                                             |
+| `cd ..`                  | change into the parent folder                                              |
+| `cd ~`                   | change into your home directory                                            |
+| `pwd`                    | print the current directory path                                           |
+| `touch example.md`       | create a file called "example.md"                                          |
+| `mkdir newFolder`        | create a folder called "newFolder"                                         |
+| `mv <oldname> <newname>` | move or rename a file                                                      |
+| `rm <filename>`          | delete a file permanently (there is no trash bin to recover files!)        |
+| `open .`                 | open the current folder in the finder                                      |
+| `cat <filename>`         | prints the content of a specific file                                      |
+| `curl <url>`             | prints the received content from the specified url. (try `curl ipinfo.io`) |
 
-work on the current change (see also: git help everyday)
-add Add file contents to the index
-mv Move or rename a file, a directory, or a symlink
-restore Restore working tree files
-rm Remove files from the working tree and from the index
+### Markdown Examples
 
-examine the history and state (see also: git help revisions)
-bisect Use binary search to find the commit that introduced a bug
-diff Show changes between commits, commit and working tree, etc
-grep Print lines matching a pattern
-log Show commit logs
-show Show various types of objects
-status Show the working tree status
+| Element                         | Markdown Syntax                         |
+| ------------------------------- | --------------------------------------- |
+| Level 1 headline                | `# Level 1 headline`                    |
+| Level 2 headline                | `## Level 2 headline`                   |
+| Level 5 headline                | `##### Level 5 headline`                |
+| list item                       | `- list item`                           |
+| [ ] done                        | `[ ] checkbox`                          |
+| [x] done                        | `[x] checkbox`                          |
+| **bold text**                   | `**bold text**`                         |
+| _italicized text_               | `_italicized text_`                     |
+| [link](https://www.example.com) | `[link text](https://www.example.com)`  |
+| image                           | `![description of image](url to image)` |
+| block quote                     | `> block quote`                         |
+| divider                         | `---`                                   |
+| `inline code block`             | `` `inline code block` ``               |
+| `code block`                    | ` ``` code block ``` `                  |
 
-grow, mark and tweak your common history
-backfill Download missing objects in a partial clone
-branch List, create, or delete branches
-commit Record changes to the repository
-merge Join two or more development histories together
-rebase Reapply commits on top of another base tip
-reset Reset current HEAD to the specified state
-switch Switch branches
-tag Create, list, delete or verify a tag object signed with GPG
+### git-cli and remote
 
-collaborate (see also: git help workflows)
-fetch Download objects and refs from another repository
-pull Fetch from and integrate with another repository or a local branch
-push Update remote refs along with associated objects
+| Git command               | Git task                                         |
+| ------------------------- | ------------------------------------------------ |
+| `git status`              | List all files that have changed and their state |
+| `git add <filename>`      | Add a file to the stage                          |
+| `git commit -m "add foo"` | Create a commit including all staged files       |
+| `git log --oneline`       | Show the commit history                          |
 
-'git help -a' and 'git help -g' list available subcommands and some
-concept guides. See 'git help <command>' or 'git help <concept>'
-to read about a specific subcommand or concept.
-See 'git help git' for an overview of the system.
+<img src="assets/untracked-to-committed.png" alt="untracked to committed" width="400">
+<img src="assets/modified-to-committed.png" alt="modified to committed" width="400">
+
+### Git `branch` commands
+
+| command                      | functionality                        |
+| ---------------------------- | ------------------------------------ |
+| `git switch -c <branchname>` | create a new branch and switch to it |
+| `git switch <branchname>`    | switch branches                      |
+| `git branch`                 | list your branches                   |
+| `git branch -a`              | list all branches (local and remote) |
+| `git branch -d <branchname>` | delete a branch                      |
+
+<img src="assets/git-basics-branching-workflow.png" width="900">
